@@ -1,0 +1,3 @@
+Background
+
+Every day, doctors are expected to remember thousands of medical conditions, drug interactions, and new research papers while treating patients with long, complicated medical histories. Because human memory has limits and hospital visits are often short, it is easy to miss rare side effects, tiny details buried in old medical notes, or unusual treatment options. This often leads to unexpected health complications or missed diagnoses that could have been prevented. As medical information grows faster than anyone can keep up with, standard healthcare needs a better way to check all the data quickly so doctors and medical students can catch these hidden risks before they harm a patient. That is where AI Intergration Into Healthcare enters.
