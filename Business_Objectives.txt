@@ -1,0 +1,21 @@
+BUSINESS OBJECTIVES
+
+Business Background:
+
+Hospitals and healthcare systems around the world face a serious problem with preventable medical errors, unexpected complications, and missed diagnoses. While doctors are highly trained, they are often overworked and physically cannot read through every single page of a patient's long medical history or keep up with millions of global medical studies. Important details—like a rare drug reaction or an unusual condition buried in old lab reports—get overlooked simply because human memory and time have limits. This causes patients to suffer from unexpected side effects, leads to longer hospital stays, and costs healthcare providers millions of dollars in preventable emergency care.
+
+Business Objectives:
+
+The main goal of this project is to build an intelligent assistant that helps healthcare teams make safer, faster, and more accurate decisions. First, the system aims to reduce unexpected medical complications by scanning patient histories to flag every possible treatment risk, including rare, less than 1% chance edge cases. Second, it aims to save clinicians time by automatically summarizing complex patient files so they can focus more on direct patient care. Third, it aims to train new doctors, nurses, and medical students on how to use modern predictive technology responsibly in their daily work.
+
+Business Success Criteria:
+
+The project will be judged a success if it achieves measurable improvements in patient safety, system efficiency, and user adoption. Specifically, the project targets a 20% to 25% drop in unexpected adverse drug events and medical complications within the first year of rollout. Operationally, it must reduce the time physicians spend manually reviewing past medical records by at least 30%. Finally, the system must achieve an 80% or higher satisfaction and trust rating from doctors and medical staff, proving that it genuinely helps their daily workflow without causing frustration or confusion.
+
+Requirements, Constraints, and Risks:
+
+To work properly, the system requires a direct connection to hospital electronic records, the ability to read messy handwritten or typed doctor notes, and a clear user interface that separates standard treatments from rare risks, with direct links to scientific research. However, the project faces strict constraints, including strict compliance with data privacy laws like HIPAA and GDPR, tight hospital IT budgets, and the requirement that the tool must work inside existing hospital software without slowing down system speed. Key risks include alert fatigue—where doctors ignore warnings if the system sends too many notifications—as well as potential data privacy breaches and the danger of the AI relying on incomplete or inaccurate patient history records.
+
+Tools and Techniques:
+
+To solve this problem safely and accurately, the project uses a combination of modern artificial intelligence techniques. Natural Language Processing tools like BioBERT are used to read and understand unstructured text, such as past doctor notes and clinical letters. A hybrid model combining Knowledge Graphs with Retrieval-Augmented Generation (RAG) acts as the reasoning engine, cross-referencing patient data against up-to-date global medical journals and drug registries to catch rare edge cases while avoiding made-up answers. Finally, standardized health data connection tools, known as FHIR APIs, allow the entire system to run smoothly inside existing hospital software like Epic or Cerner without requiring medical staff to switch between different applications.
