@@ -1,0 +1,5 @@
+Chatbot / Softbot
+
+The proposed AI chatbot/softbot will offer a straightforward interface for doctors, healthcare professionals or authorized users to communicate with the healthcare AI system in natural language. Users can enter information about a patient’s symptoms, medical history, previous treatments or test results and ask the AI to analyze the information available. The chatbot will communicate with the AI model and healthcare database to predict appropriate predictions, possible conditions, risks and treatment considerations based on available healthcare database.
+
+NLP will be used by the chatbot to comprehend the user's inquiries and recognize pertinent medical details discussed. It can provide the AI's conclusions in an easy-to-understand manner, along with potential results and corroborating evidence from the accessible medical records. The chatbot will assist medical professionals by making it easier for them to obtain and comprehend AI-generated information; it will not take the place of doctors or make final medical decisions.
