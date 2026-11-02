@@ -1,7 +1,48 @@
 Data
-The AI system will require relevant and reliable healthcare data to train, test, and operate the machine learning model. The data will include patient data such as patient ID, age, medical history, allergies, and genetic information. Clinical data will include symptoms, diagnoses, laboratory results, vital signs, and other clinical observations. This information will provide the model with the patient's medical background needed to identify relevant patterns.
-The system will also require treatment data, including medications, previous treatments, dosages, drug reactions, and treatment outcomes. Historical medical data will include previous diagnoses, complications, hospital visits, allergies, and adverse medical events. This historical information is important because it allows the machine learning model to learn from previous patient cases and identify patterns that may indicate possible risks.
-The system will also use research data, including medical studies, clinical guidelines, clinical trials, and drug information. This information will support the AI assistant when providing healthcare professionals with relevant medical information. Outcome data such as successful treatments, unsuccessful treatments, complications, adverse reactions, and patient outcomes will also be required. These outcomes provide labelled information that can be used for supervised machine learning.
-Before the data is used, it will go through data preprocessing. Missing values will be identified and handled, duplicate or incorrect records will be removed, and categorical data will be converted into a suitable format for machine learning. Relevant features will then be selected, and the dataset will be divided into training and testing data. Appropriate privacy and security measures will also be applied because healthcare data contains sensitive patient information.
+The dataset (healthcare_dataset.csv) consists of 55,500 hospital admissions between May 2019 and May 2024. Each record has a patient name, age, gender, blood type, medical condition, admission and discharge dates, doctor, hospital, insurance provider, billing amount, room number, admission type, medication and test result. There are no missing values. The Medical Condition column is the target label.
+During pre-processing, patient names are converted to Title Case, exact duplicates and near-duplicates (same patient, date, condition and bill with a slightly different age) are removed, and negative billing amounts are deleted. Two features are derived: length of stay (discharge date minus admission date) and admission month. The six categorical features are one-hot encoded and the four numeric features are standardised. The cleaned data is then split 80/20 by patient into 39,996 training and 9,908 test records (random_state = 42). The test records are saved to test_split.csv so that evaluation always uses data the model never saw during training.
+Cleaning log
+Step	Rows remaining
+Rows in raw file	55,500
+After removing exact duplicates	54,966
+After removing near-duplicates	50,000
+After removing negative bills	49,904
 
+Dataset fact	Value
+Raw records	55,500 rows, 15 columns, no missing values
+Exact duplicates removed	534
+Near-duplicates removed	4,966
+Negative billing amounts removed	96
+Records used for modelling	49,904 rows in 6 conditions
+Train / test split	39,996 / 9,908 (80% / 20%, split by patient)
+Period covered	May 2019 to May 2024 (60 months)
+Age range	18 to 85 years (mean 51.6)
+Billing amount	$9 to $52,764 (mean $25,606)
+Length of stay	1 to 30 days (mean 15.5)
 
+Dataset overview (raw file)
+Column	Type	Unique values	Missing
+Name	text	49,992	0
+Age	int64	77	0
+Gender	text	2	0
+Blood Type	text	8	0
+Medical Condition	text	6	0
+Date of Admission	text	1,827	0
+Doctor	text	40,341	0
+Hospital	text	39,876	0
+Insurance Provider	text	5	0
+Billing Amount	float64	50,000	0
+Room Number	int64	400	0
+Admission Type	text	3	0
+Discharge Date	text	1,856	0
+Medication	text	5	0
+Test Results	text	3	0
+
+Class distribution
+Medical condition	Admissions	% of total	Average billing ($)
+Arthritis	8,430	16.89%	25,514.02
+Diabetes	8,366	16.76%	25,710.49
+Hypertension	8,301	16.63%	25,550.41
+Cancer	8,278	16.59%	25,284.66
+Obesity	8,275	16.58%	25,838.04
+Asthma	8,254	16.54%	25,738.42
